@@ -1,0 +1,62 @@
+%  This is LaTeX.  Stuff after a % is ignored by LaTeX, so use it for comments 
+%  that you don't want to appear in the pdf. If you want a % itself to appear 
+%  in the document, you need to use \%
+
+%  Don't use $ either, it is used to delimit equations, e.g. $x^2 + y^2 = z^2$. 
+%  Like "%", if you want to use a $ in text, use \$.
+
+%  For both \% and \$, you should add a backslash after if you want a space.
+%  e.g:
+%%    Raising the GST to 15\%\ would raise \$27 billion, a raise of 50\%
+
+\documentclass{grattan}
+
+\usepackage{chngcntr}
+\counterwithout{footnote}{chapter}
+\usepackage{multirow}
+
+%\renewcommand{\classification}{\normalfont\textbf{\textcolor{red}{\hspace{10cm} DRAFT -- NOT FOR REDISTRIBUTION}}}
+
+\usepackage{bm}
+
+%\usepackage[charter, uppercase=upright, greekfamily=bodoni]{mathdesign}
+
+
+%% note: this is what will be displayed in the header - the front page title has been defined in the .cls file
+\title{Widening gaps: Technical Report}
+\author{Peter Goss and Cameron Chisholm}
+
+%\addbibresource{bibliography.bib}
+
+\usepackage{ragged2e}
+\AtBeginDocument{\RaggedRight}  
+
+\pretolerance=10000
+\hyphenpenalty=10000
+
+
+\begin{document}
+
+\input overview
+
+\contentspage
+
+
+\begin{appendix}
+
+\input chap1
+
+\input chap2
+
+\input chap3
+
+\input chap4
+
+
+\end{appendix}
+
+\begin{footnotesize}
+\printbibliography
+\end{footnotesize}
+
+\end{document}
